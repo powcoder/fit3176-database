@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!--
+   New Perspectives on XML
+   Tutorial 4
+   Case Problem 2
+
+   EPAC-MO Contribution Report
+   Author: Sample Solutions
+
+   Filename:         report.xml
+   Supporting Files: clist.xsd
+-->
+
+<canvlist:canvassers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xmlns:lib="http://epacmo.org/library"
+                     xmlns:canvlist="http://epacmo.org/canvassers"
+                     xmlns:contlist="http://epacmo.org/contributors"
+                     xsi:schemaLocation="http://epacmo.org/canvassers canvlist.xsd
+                                         http://epacmo.org/contributors clist.xsd">
+
+   <canvlist:canvasser id="a01" list="c001 c002 c004">
+      <canvlist:name>
+         <lib:firstName>Beverly</lib:firstName>
+         <lib:lastName>Kaufmann</lib:lastName>
+      </canvlist:name>
+      <canvlist:address>
+         <lib:street>400 Main St.</lib:street>
+         <lib:city>Jackson</lib:city>
+         <lib:state>MO</lib:state>
+         <lib:zip>31901</lib:zip>
+      </canvlist:address>
+      <canvlist:phone>555-0015</canvlist:phone>
+      <canvlist:phone>555-0016</canvlist:phone>
+      <canvlist:phone>555-2182</canvlist:phone>
+      <canvlist:collected>325</canvlist:collected>
+      <contlist:contributions>
+         <contlist:contributor id="c001" canvasser="a01">
+            <contlist:name>
+               <lib:firstName>David</lib:firstName>
+               <lib:lastName>Lee</lib:lastName>
+            </contlist:name>
+            <contlist:address>
+               <lib:street>212 West Advent St.</lib:street>
+               <lib:city>Cutler</lib:city>
+               <lib:state>MO</lib:state>
+               <lib:zip>32815</lib:zip>
+            </contlist:address>
+            <contlist:phone>555-7812</contlist:phone>
+            <contlist:donated>150</contlist:donated>
+         </contlist:contributor>
+         <contlist:contributor id="c002" canvasser="a01">
+            <contlist:name>
+               <lib:firstName>Karen</lib:firstName>
+               <lib:lastName>Belaska</lib:lastName>
+            </contlist:name>
+            <contlist:address>
+               <lib:street>500 Maple Ln.</lib:street>
+               <lib:city>Cutler</lib:city>
+               <lib:state>MO</lib:state>
+               <lib:zip>32817</lib:zip>
+            </contlist:address>
+            <contlist:phone>555-3219</contlist:phone>
+            <contlist:donated>50</contlist:donated>
+         </contlist:contributor>
+         <contlist:contributor id="c004" canvasser="a01">
+            <contlist:name>
+               <lib:firstName>Allen</lib:firstName>
+               <lib:lastName>Chmurutra</lib:lastName>
+            </contlist:name>
+            <contlist:address>
+               <lib:street>400 Main St.</lib:street>
+               <lib:city>Davidton</lib:city>
+               <lib:state>MO</lib:state>
+               <lib:zip>39112</lib:zip>
+            </contlist:address>
+            <contlist:donated>125</contlist:donated>
+         </contlist:contributor>
+      </contlist:contributions>
+   </canvlist:canvasser>
+   <canvlist:canvasser id="a02" list="c003 c005 c006">
+      <canvlist:name>
+         <lib:firstName>Kevin</lib:firstName>
+         <lib:lastName>Yates</lib:lastName>
+      </canvlist:name>
+      <canvlist:address>
+         <lib:street>25 Apple Ln.</lib:street>
+         <lib:city>Newton</lib:city>
+         <lib:state>MO</lib:state>
+         <lib:zip>38981</lib:zip>
+      </canvlist:address>
+      <canvlist:phone>555-2158</canvlist:phone>
+      <canvlist:collected>375</canvlist:collected>
+      <contlist:contributions>
+         <contlist:contributor id="c003" canvasser="a02">
+            <contlist:name>
+               <lib:firstName>Alice</lib:firstName>
+               <lib:lastName>Sanchez</lib:lastName>
+            </contlist:name>
+            <contlist:address>
+               <lib:street>5 North St.</lib:street>
+               <lib:city>Davidton</lib:city>
+               <lib:state>MO</lib:state>
+               <lib:zip>39810</lib:zip>
+            </contlist:address>
+            <contlist:donated>225</contlist:donated>
+         </contlist:contributor>
+         <contlist:contributor id="c005" canvasser="a02">
+            <contlist:name>
+               <lib:firstName>Cynthia</lib:firstName>
+               <lib:lastName>Whyte</lib:lastName>
+            </contlist:name>
+            <contlist:address>
+               <lib:street>657 Hemisphere Dr.</lib:street>
+               <lib:city>Cutler</lib:city>
+               <lib:state>MO</lib:state>
+               <lib:zip>31287</lib:zip>
+            </contlist:address>
+            <contlist:phone>555-0923</contlist:phone>
+            <contlist:donated>50</contlist:donated>
+         </contlist:contributor>
+         <contlist:contributor id="c006" canvasser="a02">
+            <contlist:name>
+               <lib:firstName>Alison</lib:firstName>
+               <lib:lastName>Heart</lib:lastName>
+            </contlist:name>
+            <contlist:address>
+               <lib:street>622 Hemisphere Dr.</lib:street>
+               <lib:city>Cutler</lib:city>
+               <lib:state>MO</lib:state>
+               <lib:zip>31287</lib:zip>
+            </contlist:address>
+            <contlist:phone>555-0923</contlist:phone>
+            <contlist:phone>555-9099</contlist:phone>
+            <contlist:donated>100</contlist:donated>
+         </contlist:contributor>
+      </contlist:contributions>
+   </canvlist:canvasser>
+</canvlist:canvassers>

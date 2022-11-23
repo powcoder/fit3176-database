@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+    Publications data
+    Author: Sample Solutions
+    
+    pub3a.xml
+-->
+
+
+<publications xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="pub3a.xsd">
+    <book>
+        <title cover="hard">XML in a Nutshell, Third Edition</title>
+        <author>Elliotte Rusty Harodls; W. Scott Means</author>
+        <datepublished>2004-09-01</datepublished>
+        <nopages>600</nopages>
+        <price>89.95</price>
+    </book>
+    <book>
+        <title cover="soft">XML Schemas</title>
+        <author>Chelsea Valentine; Lucinda Dykes; Ed Tittel</author>
+        <datepublished>2001-10-26</datepublished>
+        <nopages>500</nopages>
+        <price>82.56</price>
+    </book>
+    <book>
+        <title cover="hard">New Perspectives on XML 2nd Edition Comprehensive</title>
+        <author>Patrick Carey</author>
+        <datepublished>2006-08-17</datepublished>
+        <nopages>736</nopages>
+        <price>102.00</price>
+    </book>
+
+</publications>

@@ -1,0 +1,52 @@
+Task 1 Sample Solutions
+=======================
+
+(i) All direct child nodes of the root element publications:
+
+/publications/book
+or
+/publications/*
+
+(ii) All direct child nodes of the book element:
+
+/publications/book/*
+
+(iii) All titles elements:
+
+/publications/book/title
+or
+//title
+Avoid use of // unless there is a need to use it
+
+(iv) The text of all title elements:
+
+/publications/book/title/text()
+
+(v) The names of all hard cover books:
+
+/publications/book/title[@cover="hard"]
+or if text of name wanted -
+/publications/book/title[@cover="hard"]/text()
+
+(vi) The book elements which have a price >= 100:
+
+/publications/book[price > 100]
+
+(vii) The title of all texts written by Patrick Carey:
+
+/publications/book[author="Patrick Carey"]/title/text()
+
+or as an interesting alternative to demo path manipulation
+
+/publications/book/title[../author="Patrick Carey"]/text()
+
+(viii) In the publications document you have two books of hard cover type, 
+select one of these and write the XPath to find the title for this book based
+on the type of cover (hard) and the price ­ write the XPath expression using a 
+single predicate.
+
+/publications/book/title[@cover='hard' and ../price=102.00]
+
+Yes, this will be in trouble if you have two books which are hard cover and
+have this price - this was simply for student to see that the predicate can
+include and and or

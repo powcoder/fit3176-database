@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+    Publications data
+    Author: Sample Solutions
+    
+    pub4a.xml
+    
+    Flat catalog schema - every element below book must be qualified
+-->
+
+
+<pub:publications xmlns:pub="http://books/pub/ns"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://books/pub/ns pub4b.xsd">
+    <book>
+        <pub:title cover="hard">XML in a Nutshell, Third Edition</pub:title>
+        <pub:author>Elliotte Rusty Harodls; W. Scott Means</pub:author>
+        <pub:datepublished>2004-09-01</pub:datepublished>
+        <pub:nopages>600</pub:nopages>
+        <pub:price>89.95</pub:price>
+    </book>
+    <book>
+        <pub:title cover="soft">XML Schemas</pub:title>
+        <pub:author>Chelsea Valentine; Lucinda Dykes; Ed Tittel</pub:author>
+        <pub:datepublished>2001-10-26</pub:datepublished>
+        <pub:nopages>500</pub:nopages>
+        <pub:price>82.56</pub:price>
+    </book>
+    <book>
+        <pub:title cover="hard">New Perspectives on XML 2nd Edition Comprehensive</pub:title>
+        <pub:author>Patrick Carey</pub:author>
+        <pub:datepublished>2006-08-17</pub:datepublished>
+        <pub:nopages>736</pub:nopages>
+        <pub:price>102.00</pub:price>
+    </book>
+
+</pub:publications>

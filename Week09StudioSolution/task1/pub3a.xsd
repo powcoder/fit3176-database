@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:annotation>
+        <xs:documentation> Pub3a schema file Task 2 (iii) Add annotation, restriction on title, mask
+            for price, cover attribute
+            
+            Author: Sample Solutions </xs:documentation>
+    </xs:annotation>
+
+<!-- Limit the title string to 10 - 50 characters -->
+<xs:simpleType name="std-title">
+    <xs:restriction base="xs:string">
+        <xs:minLength value="10"/>
+        <xs:maxLength value="50"/>
+    </xs:restriction>
+</xs:simpleType>    
+    
+<!-- Regular expresssion for the payment amount -->
+<xs:simpleType name="amount-style">
+    <xs:restriction base="xs:decimal">
+        <xs:pattern value="(\d){1,3}(\.)(\d){2}"/>
+    </xs:restriction>
+</xs:simpleType>
+    
+<!-- Type to limit cover attribute -->
+<xs:simpleType name="cover-type">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="hard"/>
+        <xs:enumeration value="soft"/>
+    </xs:restriction>
+</xs:simpleType>
+    
+    <xs:element name="publications">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="book" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="title">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="std-title">
+                                            <xs:attribute name="cover" type="cover-type" use="required"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="author" type="xs:string"/>
+                            <xs:element name="datepublished" type="xs:date"/>
+                            <xs:element name="nopages" type="xs:positiveInteger"/>
+                            <xs:element name="price" type="amount-style"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+
+        </xs:complexType>
+
+    </xs:element>
+
+</xs:schema>

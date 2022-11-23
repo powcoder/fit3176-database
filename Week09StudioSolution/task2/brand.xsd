@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+ 
+  <xs:simpleType name="BrandType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="VALUE"/>
+      <xs:enumeration value="PREMIUM"/>
+      <xs:enumeration value="CONTRACTOR"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:element name="Brand">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Name"/>
+        <xs:element ref="Type"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Name" type="xs:string"/>
+  <xs:element name="Type" type="BrandType"/>
+</xs:schema>
